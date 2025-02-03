@@ -44,8 +44,8 @@ if st.button('predict win percentage'):
                   'recquired run rate':[rrr]})
 
     result=model.predict_proba(df)
-    loss=round((result[0][0])*100,2)
-    win=round((result[0][1])*100,2)
+    loss=round((result[0][0])*100)
+    win=round((result[0][1])*100)
 
     st.text(f"Winning chance of {chasing_team}: {win}%")
     st.text(f"Winning chance of {batting_team}: {loss}%")
